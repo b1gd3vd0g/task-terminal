@@ -1,8 +1,17 @@
 use postgres::{Client, Error, NoTls};
+use std::env;
 
 pub fn pg_client() -> Result<Client, Error> {
+    let config = env::var("PGCONFIG");
+    let config = match config {
+        Ok(c) => c,
+        Err(_) => {
+            println!("environment variable `PGCONFIG` not found!");
+            "".to_string()
+        }
+    };
     Client::connect(
-        "host=localhost user=b1gd3vd0g dbname=task_terminal",
+        &config.as_str(),
         NoTls,
     )
 }
