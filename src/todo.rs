@@ -21,9 +21,9 @@ impl Todo {
     }
 
     /// Fetches all Todos from the database.
-    /// 
+    ///
     /// # Examples
-    /// 
+    ///
     /// ```
     /// // prints the `task` field from all todos.
     /// use task_terminal::todo::Todo;
@@ -32,7 +32,7 @@ impl Todo {
     ///     // 0 is the index of the `task` column.
     ///     println!("{}", row.get(0));
     /// }
-    /// 
+    ///
     /// ```
     pub fn fetch_all() -> Result<Vec<Row>, Error> {
         let client: Result<Client, Error> = pg_client();
@@ -54,12 +54,11 @@ impl Todo {
         //println!("{:?}", rows);
         Ok(rows)
     }
-
-
+    
     /// Saves the Todo to the database!
-    /// 
+    ///
     /// # Examples
-    /// 
+    ///
     /// ```
     /// use task_terminal::todo::Todo;
     /// let todo = Todo::new("Do this!".to_string());
