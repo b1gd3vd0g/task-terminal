@@ -1,6 +1,11 @@
 [package]
 name = "task-terminal"
 version = "0.1.0"
+authors = ["Devin Peevy <devin.peevy@outlook.com"]
 edition = "2021"
+description = "A terminal-based productivity client."
+documentation = "tbd"
+readme = "README.md"
 
 [dependencies]
+postgres = "0.19.9"
