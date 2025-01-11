@@ -10,8 +10,5 @@ pub fn pg_client() -> Result<Client, Error> {
             "".to_string()
         }
     };
-    Client::connect(
-        &config.as_str(),
-        NoTls,
-    )
+    Client::connect(&config.as_str(), NoTls)
 }
