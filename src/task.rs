@@ -1,5 +1,5 @@
-use crate::db::pg_client;
 use crate::util::system_time_to_date_time;
+use crate::{db::pg_client, util::print_to_width};
 use chrono::DateTime;
 use postgres::{Error, Row};
 use std::time::SystemTime;
@@ -70,6 +70,16 @@ impl Task {
                 Task::from(r)
             })
             .collect())
+    }
+
+    pub fn print(&self) {
+        let id_s = format!("{}", self.id());
+        let _ = print_to_width(id_s, 10);
+        let _ = print_to_width(self.task(), 20);
+        let _ = print_to_width(self.created()[..19].to_string(), 23);
+        let c = if self.completed() { "true" } else { "false" };
+        let _ = print_to_width(String::from(c), 5);
+        println!();
     }
 
     fn fetch_all_rows() -> Result<Vec<Row>, Error> {
