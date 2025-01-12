@@ -1,6 +1,6 @@
 use dotenv::dotenv;
 use std::env;
-use todo;
+use bdd_todo as todo;
 
 fn main() {
     // configure the environment variable.
