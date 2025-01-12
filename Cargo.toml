@@ -1,5 +1,5 @@
 [package]
-name = "todo"
+name = "bdd-todo"
 version = "0.1.0"
 authors = ["Devin Peevy <devin.peevy@outlook.com>"]
 edition = "2021"
