@@ -1,8 +1,8 @@
-use std::time::SystemTime;
 use crate::db::pg_client;
 use crate::util::system_time_to_date_time;
 use chrono::DateTime;
 use postgres::{Error, Row};
+use std::time::SystemTime;
 
 #[derive(Debug)]
 pub struct Task {
