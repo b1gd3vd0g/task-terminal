@@ -1,11 +1,13 @@
 [package]
 name = "bdd-todo"
+license = "MIT"
 version = "0.1.0"
 authors = ["Devin Peevy <devin.peevy@outlook.com>"]
 edition = "2021"
 description = "A terminal-based productivity client."
 documentation = "tbd"
 readme = "README.md"
+repository = "https://github.com/b1gd3vd0g/task-terminal.git"
 
 [dependencies]
 chrono = "0.4.39"
