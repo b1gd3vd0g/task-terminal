@@ -1,5 +1,5 @@
 use dotenv::dotenv;
-use std::{env, process};
+use std::env;
 use todo;
 
 fn main() {
