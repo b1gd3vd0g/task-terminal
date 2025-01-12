@@ -8,5 +8,6 @@ documentation = "tbd"
 readme = "README.md"
 
 [dependencies]
+chrono = "0.4.39"
 dotenv = "0.15.0"
 postgres = "0.19.9"
